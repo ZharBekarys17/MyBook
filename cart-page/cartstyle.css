@@ -1,0 +1,88 @@
+nav,
+header{
+    background-color: rgb(245, 245, 245);
+}
+.nav-up{
+    display: flex;
+    justify-content: space-around;
+}
+.logo{
+    display: flex;
+    gap: 10px;
+}
+#search{
+    border-radius: 5px;
+    text-align: center;
+    height:35px;
+    width: 250px;
+}
+.values {
+    display: flex;
+    gap: 50px;
+    color: brown;
+}
+.logo img{
+    width: 75px;
+    height: 75px;
+}
+a li{
+    list-style-type: none;
+    color: brown;
+    margin-left: 12px;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    display: flex;
+}
+.nav-cards{
+    display: flex;
+    gap: 17px;
+    justify-content: center;
+}
+.nav-cards button{
+    background-color: white;
+    border-radius: 5px;
+    color: brown;
+    border: none;
+
+}
+header{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+.maket{
+    display: flex;
+    gap: 9px;
+
+}
+.header-center-info{
+    display: flex;
+    color: grey;
+    gap: 18px;
+}
+.yellow-block{
+    background-color: rgb(255, 246, 192);
+    width: fit-content;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 15px;
+}
+.yellow-button{
+    background-color: rgb(237, 92, 2);
+    color: white;
+    border: none;
+}
+.header-left{
+    filter: blur(3px);
+    /* -webkit-backdrop-filter: blur(3px); */
+    position: relative;
+}
+.inline-block{
+    position: absolute;
+}

@@ -1,0 +1,115 @@
+nav,
+header{
+    background-color: rgb(245, 245, 245);
+}
+.nav-up{
+    display: flex;
+    justify-content: space-around;
+}
+.logo{
+    display: flex;
+    gap: 10px;
+}
+#search{
+    border-radius: 5px;
+    text-align: center;
+    height:35px;
+    width: 250px;
+}
+.logo img{
+    width: 75px;
+    height: 75px;
+}
+.values {
+    display: flex;
+    gap: 50px;
+    color: brown;
+}
+
+li{
+    list-style-type: none;
+    color: brown;
+    margin-left: 12px;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    display: flex;
+}
+.nav-cards{
+    display: flex;
+    gap: 17px;
+    justify-content: center;
+    
+}
+.nav-cards button{
+    background-color: white;
+    border-radius: 5px;
+    color: brown;
+    display: flex;
+    justify-content: center;
+    border: none;
+    padding: 5px;
+}
+.header-actions{
+    display: flex;
+    justify-content: space-around;
+}
+.header-actions-left button{
+    background-color: rgb(237, 92, 2);
+    border-radius: 5px;
+    padding: 20px;
+    color: white;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    
+}
+.header-cards{
+    display: flex;
+    justify-content: space-around;
+    border: none;
+}
+.ic{
+    height: 40px;
+    width: 40px;
+}
+
+.personalized-selection{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+.cart {
+    max-width: 100px;
+}
+.perimg{
+    width: 110px;
+    height: 170px;
+    border-radius: 5px;
+}
+.personalized-selection p {
+    text-wrap: wrap;
+}
+.text-wrap {
+    width:100%;
+
+/* -webkit-hyphens: auto;
+-moz-hyphens: auto;
+-ms-hyphens: auto; */
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    text-overflow: ellipsis; 
+}
+.buisness-cards{
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    overflow-x:auto;
+}
+.buisness-cards ::-webkit-scrollbar{
+    display: none;
+}
