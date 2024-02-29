@@ -1,92 +1,84 @@
-const cartinfo =[
-    {
-        id:1,
-        imgUrl:'../assets/personolize/unesbe.jpg',
-        rating:`⭐4.35 (7 825 оценки)`,
-        pages:265,
-        readingtime:7,
-        year:2016,
-        age:16,
-        name:'Утреннее сияние',
-        author:'Сара Джио',
-    },
-    {
-        id:2,
-        imgUrl:'../assets/personolize/mark.jpg',
-        rating:`⭐4.37 (33 473 оценки)`,
-        pages:158,
-        readingtime:4,
-        year:'2017',
-        age:16,
-        name:'Тонкое искусство пофигизма. Парадоксальный способ жить счастливо',
-        author:'Марк Мэнсон',
-    },
-    {
-        id:3,
-        imgUrl:'../assets/personolize/gogol.jpg',
-        rating:`⭐4.37 (33 473 оценки)`,
-        pages:41,
-        readingtime:2,
-        year:2008,
-        age:12,
-        name:'Вий',
-        author:'Николай Гоголь',
-    },
-    {
-        id:4,
-        imgUrl:'../assets/personolize/thuleiha.jpg',
-        rating:`⭐4.37 (33 473 оценки)`,
-        pages:395,
-        readingtime:10,
-        year:2015,
-        age:16,
-        name:'Зулейха открывает глаза',
-        author:'Гузель Яхина',
-    },
-    {
-        id:5,
-        imgUrl:'../assets/personolize/witcher.jpg',
-        rating:`⭐4.37 (33 473 оценки)`,
-        pages:2485,
-        readingtime:63,
-        year:2014,
-        age:16,
-        name:'Ведьмак',
-        author:'Андрей Сапковский',
-    },
-    {
-        id:6,
-        imgUrl:'../assets/personolize/unesbe.jpg',
-        rating:`⭐4.37 (33 473 оценки)`,
-        pages:511,
-        readingtime:13,
-        year:2017,
-        age:18,
-        name:'Жажда',
-        author:'Ю Несбё',
-    },
-    {
-        id:7,
-        imgUrl:'../assets/personolize/Dan.jpg',
-        rating:`⭐4.37 (33 473 оценки)`,
-        pages:465,
-        readingtime:12,
-        year:2018,
-        age:16,
-        name:'Происхождение ',
-        author:'Дэн Браун',
-    },
-]
+// const cartinfo =[
+//     {
+//         id:1,
+//         imgUrl:'../assets/personolize/unesbe.jpg',
+//         rating:`⭐4.35 (7 825 оценки)`,
+//         pages:265,
+//         readingtime:7,
+//         year:2016,
+//         age:16,
+//         name:'Утреннее сияние',
+//         author:'Сара Джио',
+//     },
+//     {
+//         id:2,
+//         imgUrl:'../assets/personolize/mark.jpg',
+//         rating:`⭐4.37 (33 473 оценки)`,
+//         pages:158,
+//         readingtime:4,
+//         year:'2017',
+//         age:16,
+//         name:'Тонкое искусство пофигизма. Парадоксальный способ жить счастливо',
+//         author:'Марк Мэнсон',
+//     },
+//     {
+//         id:3,
+//         imgUrl:'../assets/personolize/gogol.jpg',
+//         rating:`⭐4.37 (33 473 оценки)`,
+//         pages:41,
+//         readingtime:2,
+//         year:2008,
+//         age:12,
+//         name:'Вий',
+//         author:'Николай Гоголь',
+//     },
+//     {
+//         id:4,
+//         imgUrl:'../assets/personolize/thuleiha.jpg',
+//         rating:`⭐4.37 (33 473 оценки)`,
+//         pages:395,
+//         readingtime:10,
+//         year:2015,
+//         age:16,
+//         name:'Зулейха открывает глаза',
+//         author:'Гузель Яхина',
+//     },
+//     {
+//         id:5,
+//         imgUrl:'../assets/personolize/witcher.jpg',
+//         rating:`⭐4.37 (33 473 оценки)`,
+//         pages:2485,
+//         readingtime:63,
+//         year:2014,
+//         age:16,
+//         name:'Ведьмак',
+//         author:'Андрей Сапковский',
+//     },
+//     {
+//         id:6,
+//         imgUrl:'../assets/personolize/unesbe.jpg',
+//         rating:`⭐4.37 (33 473 оценки)`,
+//         pages:511,
+//         readingtime:13,
+//         year:2017,
+//         age:18,
+//         name:'Жажда',
+//         author:'Ю Несбё',
+//     },
+//     {
+//         id:7,
+//         imgUrl:'../assets/personolize/Dan.jpg',
+//         rating:`⭐4.37 (33 473 оценки)`,
+//         pages:465,
+//         readingtime:12,
+//         year:2018,
+//         age:16,
+//         name:'Происхождение ',
+//         author:'Дэн Браун',
+//     },
+// ]
 
 
-const url = window.location.href
-console.log(url)
-
-const id = url.split("id=")[1]
-console.log(id)
-
-const book = cartinfo.find(bk => bk.id == id)
-console.log(book)
 
 
 {/* <div class="header-left">
@@ -115,9 +107,11 @@ console.log(book)
     </div> */}
 
 
-const link = 'https://65dc5ad4e7edadead7ebb756.mockapi.io/bookinfo'
 let createHside = (book) =>{
     const {id, imgUrl, rating, pages, readingtime, year, age, name, author} = book
+
+    const motherdiv = document.createElement('div')
+
     const hleft = document.createElement('div')
     hleft.classList.add('header-left')
     
@@ -153,7 +147,7 @@ let createHside = (book) =>{
     const needage = document.createElement('p')
     needage.textContent = age +'+'
 
-    title = document.createElement('h1')
+    const title = document.createElement('h1')
     title.textContent = name
     const writer = document.createElement('p')
     writer.textContent = author
@@ -166,6 +160,8 @@ let createHside = (book) =>{
     hcenter.appendChild(maket)
     hcenter.appendChild(title)
     hcenter.appendChild(writer)
+    motherdiv.appendChild(hleft)
+    motherdiv.appendChild(hcenter)
 
     const yellowBlock = document.createElement('div')
     yellowBlock.classList.add('yellow-block')
@@ -186,33 +182,45 @@ let createHside = (book) =>{
     yellowBlock.appendChild(cost)
     yellowBlock.appendChild(anotherp)
     yellowBlock.appendChild(button)
+    motherdiv.appendChild(yellowBlock)
 }
-createHside(link)
-const backimg = document.querySelector("#backimg")
-backimg.src = book.imgUrl
-const rate  = document.querySelector('#rating')
-rate.textContent = book.rating
 
-const title = document.querySelector('#title')
-title.textContent = book.name
+const link = 'https://65dc5ad4e7edadead7ebb756.mockapi.io/bookinfo'
+fetch(link)
+.then(res => res.json())
+.then((data) =>{
+    const url = window.location.href
+    const id = url.split("id=")[1]
+    const book = data.find(bk => bk.id == id)
+    book.forEach(bk => createHside(book))
+})
 
-const writer = document.querySelector('#author')
-writer.textContent = book.author
+// createHside(link)
+// const backimg = document.querySelector("#backimg")
+// backimg.src = book.imgUrl
+// const rate  = document.querySelector('#rating')
+// rate.textContent = book.rating
 
-//  <div class="header-center-info">
-const centerInfo = document.querySelector('.header-center-info')
+// const title = document.querySelector('#title')
+// title.textContent = book.name
 
-const pages = document.createElement('p')
-pages.textContent = `${book.pages} печатных страниц`
+// const writer = document.querySelector('#author')
+// writer.textContent = book.author
 
-const rtime = document.createElement('p')
-rtime.textContent = `Время чтения ≈ ${book.readingtime}ч`
-const published = document.createElement('p')
-published.textContent = `${book.year} год`
+// //  <div class="header-center-info">
+// const centerInfo = document.querySelector('.header-center-info')
 
-const age = document.createElement('p')
-age.textContent = book.age +'+'
-centerInfo.appendChild(pages)
-centerInfo.appendChild(rtime)
-centerInfo.appendChild(published)
-centerInfo.appendChild(age)
+// const pages = document.createElement('p')
+// pages.textContent = `${book.pages} печатных страниц`
+
+// const rtime = document.createElement('p')
+// rtime.textContent = `Время чтения ≈ ${book.readingtime}ч`
+// const published = document.createElement('p')
+// published.textContent = `${book.year} год`
+
+// const age = document.createElement('p')
+// age.textContent = book.age +'+'
+// centerInfo.appendChild(pages)
+// centerInfo.appendChild(rtime)
+// centerInfo.appendChild(published)
+// centerInfo.appendChild(age)

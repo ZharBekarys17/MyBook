@@ -201,9 +201,9 @@ let createBuisnesss = (book) =>{
     cart.appendChild(rate)
     cart.appendChild(title)
     cart.appendChild(aut)
-    // title.addEventListener('click', () =>{
-    //     window.location.href = `../cart-page/cartpage.html?id=${book.id}`
-    // })
+    title.addEventListener('click', () =>{
+        window.location.href = `../cart-page/cartpage.html?id=${book.id}`
+    })
     title.addEventListener('mouseenter', ()=>{
         title.style.cursor= 'pointer'
     })
